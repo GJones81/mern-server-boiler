@@ -50,7 +50,7 @@ userSchema.set('toJSON', {
 // typedPassword is the password just typed in
 // this.password refers to the user object (password from above)
 userSchema.methods.validPassword = function (typedPassword) {
-	return bcrypt.campareSync(typedPassword, this.password)
+	return bcrypt.compareSync(typedPassword, this.password)
 }
 
 // Export user model
